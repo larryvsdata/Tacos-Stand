@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative "../lib/tacos_stand.rb"
+
+TacosStand::Controller.new.menu
