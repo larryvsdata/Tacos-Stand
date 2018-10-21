@@ -1,7 +1,7 @@
 
 
 
-class FirstLayer
+class TacosStand::FirstLayer
 
 attr_accessor :website , :main_page , :sub_titles , :all_titles , :all_descs , :all_prices
 attr_accessor :second_layers
@@ -57,7 +57,7 @@ def build_second_layers
   ind = 0
 
   while ind < @sub_titles.size
-    second_l = SecondLayer.new(@sub_titles[ind] , @all_titles[ind] , @all_descs[ind] , @all_prices[ind] )
+    second_l = TacosStand::SecondLayer.new(@sub_titles[ind] , @all_titles[ind] , @all_descs[ind] , @all_prices[ind] )
     second_l.second_wrapper
     @second_layers << second_l
     ind +=1

@@ -1,7 +1,7 @@
 #require_relative "first_layer_list.rb"
 
 
-class SecondLayer
+class TacosStand::SecondLayer
 attr_accessor  :sub_title , :titles , :descs  , :prices , :size , :hash_list , :food_item_list
 
 def initialize(sub_title = "" , titles = [] , descs = [] , prices = [])
@@ -37,7 +37,7 @@ end
 
 def fillup_food_items
 @hash_list.each do |h|
-@food_item_list<< FoodItem.new(h)
+@food_item_list<< TacosStand::FoodItem.new(h)
 end
 end
 

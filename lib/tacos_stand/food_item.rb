@@ -1,6 +1,6 @@
 
 
-class FoodItem
+class TacosStand::FoodItem
   attr_accessor :desc , :title , :price
 
   def initialize (food_hash)

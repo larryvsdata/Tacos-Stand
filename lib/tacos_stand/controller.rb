@@ -3,17 +3,19 @@ class TacosStand::Controller
 attr_accessor  :first_layer
 
   def initialize
-    @first_layer = FirstLayer.new
+    @first_layer = TacosStand::FirstLayer.new
     @first_layer.first_wrapper
   end
 
 
   def welcome
+    puts ""
     puts "Welcome to Tacos Stand!"
-    puts "To list all sub menus type 'Sub Menus'."
-    puts "To list all items in a sub-menu type 'List sub-menu' and type the number of the sub-menu."
+    puts "To list all sub menus type 'View Menu'."
+    puts "To list all items in a sub-menu type 'List Items' and type the number of the sub-menu."
     puts "To see the description of an item in any sub-menu, type 'Describe'  and then the number of the sub-menu & the number of the item. "
     puts "To exit, type 'exit' ."
+    puts ""
 
   end
 
@@ -30,9 +32,9 @@ attr_accessor  :first_layer
       case choice
       when "exit"
         break
-      when 'sub menus'
+      when 'view menu'
         self.sub_menus
-      when 'list sub-menu'
+      when 'list items'
         self.print_submenu
       when "describe"
         self.describe_item
@@ -66,8 +68,4 @@ def describe_item
 end
 
 end
-
-
-#controller = Controller.new
-
-#controller.menu
+#TacosStand::Controller.new.menu
